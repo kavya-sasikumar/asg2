@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Blocky Animal (Cute Mouse)</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    #fpsCanvas {
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body onload="main()">
+
+  <canvas id="fpsCanvas" width="400" height="300"></canvas>
+
+
+  <canvas id="webgl" width="400" height="300"></canvas>
+
+  <div style="position: absolute; top: 310px;">
+    <label>Rotate Global: <input type="range" id="angleSlide" min="-180" max="180" value="0"></label><br>
+    <label>Tail Angle: <input type="range" id="tailSlide" min="-45" max="45" value="0"></label><br>
+    <label>Leg Angle: <input type="range" id="legSlide" min="-45" max="45" value="0"></label><br>
+    <button id="animateButton">Toggle Tail Animation</button>
+  </div>
+
+  <script src="lib/webgl-utils.js"></script>
+  <script src="lib/webgl-debug.js"></script>
+  <script src="lib/cuon-utils.js"></script>
+  <script src="lib/cuon-matrix-cse160.js"></script>
+  <script src="Cube.js"></script>
+  <script src="fpsCounter.js"></script>
+  <script src="BlockyAnimal.js"></script>
+
+</body>
+</html>
